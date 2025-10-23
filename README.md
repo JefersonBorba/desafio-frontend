@@ -1,3 +1,8 @@
+[![CI Tests](https://github.com/JefersonBorba/desafio-frontend/actions/workflows/test.yml/badge.svg)](https://github.com/JefersonBorba/desafio-frontend/actions/workflows/test.yml)
+[![Lint & Type Check](https://github.com/JefersonBorba/desafio-frontend/actions/workflows/lint.yml/badge.svg)](https://github.com/JefersonBorba/desafio-frontend/actions/workflows/lint.yml)
+[![CodeQL](https://github.com/JefersonBorba/desafio-frontend/actions/workflows/codeql.yml/badge.svg)](https://github.com/JefersonBorba/desafio-frontend/actions/workflows/codeql.yml)
+[![Vercel](https://vercelbadge.vercel.app/api/JefersonBorba/desafio-frontend)](https://desafio-frontend.vercel.app/)
+
 # 🎥 YouTube Clone – Technical Test
 
 This project is a **YouTube-style video platform** built as part of a technical challenge for ByCoders\_.
