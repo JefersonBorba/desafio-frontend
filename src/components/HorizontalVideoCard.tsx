@@ -1,19 +1,6 @@
 import Image from "next/image";
-import { TimeBadge } from "./TimeBadge";
-
-interface HorizontalVideoCardProps {
-  video: {
-    id: { videoId: string };
-    snippet: {
-      title: string;
-      channelTitle: string;
-      publishedAt: string;
-      thumbnails: { medium: { url: string } };
-    };
-    statistics: { viewCount: string };
-    contentDetails: { duration: string };
-  };
-}
+import TimeBadge from "./TimeBadge";
+import type { HorizontalVideoCardProps } from "@/types/videos";
 
 export function HorizontalVideoCard({ video }: HorizontalVideoCardProps) {
   const formatDate = (dateString: string) => {
@@ -47,7 +34,6 @@ export function HorizontalVideoCard({ video }: HorizontalVideoCardProps) {
   return (
     <a href={`/watch?v=${video.id.videoId}`} className="block group">
       <div className="flex items-start gap-3 cursor-pointer hover:opacity-90 transition shrink-0">
-        {/* Thumbnail */}
         <div className="relative w-40 h-[90px] shrink-0 overflow-hidden rounded-md">
           <Image
             src={video.snippet.thumbnails.medium.url}
@@ -60,7 +46,6 @@ export function HorizontalVideoCard({ video }: HorizontalVideoCardProps) {
           <TimeBadge time={video.contentDetails.duration} />
         </div>
 
-        {/* Info */}
         <div className="flex flex-col justify-start min-w-0">
           <h3 className="text-sm font-semibold line-clamp-2 text-zinc-900 dark:text-zinc-100">
             {video.snippet.title}
