@@ -4,6 +4,7 @@ import "./globals.css";
 import Header from "@/components/Header";
 import { UserProvider } from "@/context/UserContext";
 import { PostHogProvider } from "@/providers/posthogProvider";
+import { Suspense } from "react";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -34,7 +35,7 @@ export default function RootLayout({
         <PostHogProvider>
           <UserProvider>
             <Header />
-            {children}
+            <Suspense>{children}</Suspense>
           </UserProvider>
         </PostHogProvider>
       </body>

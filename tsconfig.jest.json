@@ -2,7 +2,9 @@
   "extends": "./tsconfig.json",
   "compilerOptions": {
     "types": ["jest", "@testing-library/jest-dom"],
-    "noEmit": true
+    "noEmit": true,
+    "typeRoots": ["./node_modules/@types"], // ⬅️ restricts type discovery
+    "skipLibCheck": true
   },
   "include": [
     "jest.setup.ts",
