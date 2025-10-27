@@ -1,19 +1,17 @@
+/** @type {import('eslint').Linter.Config} */
 module.exports = {
   root: true,
-  extends: ['next/core-web-vitals', 'plugin:testing-library/react'],
+  extends: ['next/core-web-vitals'],
   overrides: [
     {
-      files: ['**/__tests__/**/*.[jt]s?(x)', '**/?(*.)+(spec|test).[jt]s?(x)'],
+      files: ['**/__tests__/**/*.{ts,tsx}', '**/*.test.{ts,tsx}'],
       env: {
         jest: true,
       },
-      globals: {
-        expect: 'readonly',
-        test: 'readonly',
-        describe: 'readonly',
-      },
+      plugins: ['jest', 'testing-library'],
+      extends: ['plugin:jest/recommended', 'plugin:testing-library/react'],
       parserOptions: {
-        project: './tsconfig.jest.json', // 👈 key line
+        project: './tsconfig.jest.json',
       },
     },
   ],

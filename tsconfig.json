@@ -12,6 +12,7 @@
     "moduleResolution": "bundler",
     "resolveJsonModule": true,
     "isolatedModules": true,
+    "typeRoots": ["./node_modules/@types"],
     "jsx": "react-jsx",
     "incremental": true,
     "plugins": [{ "name": "next" }],
@@ -28,5 +29,5 @@
     "jest.setup.ts",
     "src/**/*"
   ],
-  "exclude": ["node_modules", "cypress", "__tests__"]
+  "exclude": ["node_modules", "cypress", "__tests__", "./cypress.config.ts"]
 }
