@@ -10,6 +10,14 @@ jobs:
         with:
           node-version: 20
           cache: "npm"
+
       - run: npm ci
-      - run: npm run lint
-      - run: npm run type-check
+
+      - name: Run ESLint
+        run: npm run lint
+
+      - name: Type check (app only)
+        run: npm run type-check
+
+      - name: Type check (tests)
+        run: npm run type-check:tests

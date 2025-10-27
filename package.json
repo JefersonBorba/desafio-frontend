@@ -8,6 +8,7 @@
     "start": "next start",
     "lint": "eslint . --ext .ts,.tsx --max-warnings=0",
     "type-check": "tsc --noEmit",
+    "type-check:tests": "tsc -p tsconfig.jest.json --noEmit",
     "test": "jest",
     "test:ci": "jest --coverage",
     "e2e": "cypress open",
@@ -15,11 +16,11 @@
     "prepare": "husky install"
   },
   "dependencies": {
-    "@sentry/nextjs": "^10.22.0",
+    "@sentry/nextjs": "^10.21.0",
     "@tanstack/react-query": "^5.90.5",
     "canvas-confetti": "^1.9.3",
     "next": "16.0.0",
-    "posthog-js": "^1.280.1",
+    "posthog-js": "^1.279.3",
     "react": "19.2.0",
     "react-dom": "19.2.0",
     "react-modal": "^3.16.3",

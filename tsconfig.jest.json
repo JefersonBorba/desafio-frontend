@@ -3,7 +3,7 @@
   "compilerOptions": {
     "types": ["jest", "@testing-library/jest-dom"],
     "noEmit": true,
-    "typeRoots": ["./node_modules/@types"], // ⬅️ restricts type discovery
+    "typeRoots": ["./node_modules/@types"],
     "skipLibCheck": true
   },
   "include": [
